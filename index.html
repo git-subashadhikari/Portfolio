@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Subash Adhikari [bi95gn]</title>
+<link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <style>
+    :root{
+         --bg:#0f1724;
+        --card:#1b2b4b;
+        --muted:#98a0b3;
+        --accent:#06b6d4;
+        --glass: rgba(255,255,255,0.04);
+        --radius:14px;
+        color-scheme: dark;
+    }
+    *{
+        box-sizing:border-box
+    }
+    body{
+            margin:0;
+            font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+            background:linear-gradient(180deg,#132249 0%, #071a2b 100%);
+            color:#e6eef7;
+            -webkit-font-smoothing:antialiased;
+        }
+    /* NAV */
+    .nav{
+        position:fixed;
+        left:0;right:0;
+        top:12px;
+        margin:auto;
+        max-width:1100px;
+        padding:12px 20px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        z-index:60;backdrop-filter:blur(8px);
+        background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+        border-radius:999px
+    }
+    .brand{
+        display:flex;
+        gap:12px;
+        align-items:center
+    }
+    .logo{
+        width:44px;
+        height:44px;
+        border-radius:10px;
+        background:linear-gradient(135deg,var(--accent),#7c3aed);
+        display:flex;align-items:center;
+        justify-content:center;font-weight:700
+    }
+    .brand h1{
+        font-size:15px;
+        margin:0}
+    nav a{
+        color:var(--muted);
+        text-decoration:none;
+        margin:0 10px;
+        font-size:15px
+    }
+    .nav
+    .actions{
+        display:flex;
+        align-items:center;gap:10px
+    }
+    .btn{
+        border:0;
+        padding:8px 12px;
+        border-radius:10px;
+        background:var(--glass);
+        color:var(--muted);
+        cursor:pointer
+    }
+    .toggle{
+        display:inline-flex;
+        align-items:center;
+        gap:8px
+    }
+/*Social media icon*/
+.home-sci a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+.home-sci a:hover{
+    background: #0ef;
+    color: #0f1724;
+    box-shadow: 0 0 20px #0ef;
+}
+    .hero{
+        padding:120px 20px 40px;
+        max-width:1100px;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:1fr 360px;
+        gap:28px;
+        align-items:start
+    }
+    .intro{
+        align-self:center
+    }
+    .eyebrow{
+        color:var(--accent);
+        font-weight:600;
+        font-size:13px
+    }
+    h2{
+        font-size:42px;
+        margin:8px 0 12px;
+        line-height:1.02
+    }
+    p.lead{
+        color:var(--muted);
+        margin:0 0 16px
+    }
+    .cta{
+        display:flex;
+        gap:12px
+    }
+    .primary{
+        background:linear-gradient(90deg,var(--accent),#7c3aed);
+        color:#ffffff;
+        padding:10px 16px;
+        border-radius:12px;
+        font-weight:750;
+    }
+    .secondary{
+        background:transparent;
+        border:1px solid rgba(255,255,255,0.05);
+        padding:10px 14px;
+        border-radius:12px;
+        color:var(--muted)
+    }
+
+/* Skills */
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill span {
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+.bar {
+  background:rgba(255,255,255,0.1);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.fill {
+  height:22px;
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  text-align:right;
+  padding-right:6px;
+  line-height:22px;
+  border-radius:8px;
+}
+
+.fill.wp { width:75%; background:#7e22ce; }  
+.fill.jq { width:65%; background:#f59e0b; }  
+.fill.bs { width:75%; background:#ef4444; } 
+.fill.js { width:55%; background:#1b7945; } 
+.fill.php { width:45%; background:#8019af; } 
+
+
+
+    /* right column card */
+    .card{
+        background:linear-gradient(180deg, rgba(207, 173, 173, 0.02), rgba(255,255,255,0.01));
+        padding:18px;
+        border-radius:16px
+    }
+    .small{
+        font-size:13px;
+        color:var(--muted)
+    }
+    /* Projects */
+    .projects{
+        max-width:1100px;
+        margin:18px auto;
+        padding:0 20px
+    }
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        gap:18px
+    }
+    .project{
+        background:linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255,255,255,0.01));
+        /* background-color: #09203a; */
+        padding:14px;
+        border-radius:14px;
+       
+    }
+    .project img{
+        width:140px;
+        height:140px;
+        object-fit:cover;
+        border-radius:10px
+    }
+    .project h3{
+        margin:10px 0 6px;
+        font-size:16px
+    }
+    .project p{color:var(--muted);
+        font-size:13px;
+        margin:0
+    }
+    section {
+  scroll-margin-top: 100px; 
+}
+
+    /* gallery slider */
+    .slider{
+        position:relative;
+        margin-top:28px;
+        border-radius:12px;
+        overflow:hidden
+    }
+    .slides{
+        display:flex;
+        transition:transform .45s cubic-bezier(.2,.9,.3,1)
+    }
+    .slide{
+        min-width:100%;
+        height:320px
+    }
+    .slide img{
+        width:100%;
+        height:100%;
+        object-fit:cover
+    }
+    .arrow{
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        background:rgba(0,0,0,0.35);
+        border-radius:999px;
+        border:0;
+        padding:10px;
+        cursor:pointer
+    }
+    .arrow.left{left:12px}
+    .arrow.right{right:12px}
+    /* footer */
+    footer{
+        max-width:1100px;
+        margin:40px auto;
+        padding:18px 20px;
+        color:var(--muted)
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{
+        grid-template-columns:1fr;
+        gap:12px;
+        padding-top:100px
+    }
+      .brand h1{
+        display:none
+    }
+      .nav{
+        padding:10px
+    }
+    }
+
+    /* small animations */
+    .logo{
+        animation:spin 6s linear infinite
+    }
+    @keyframes spin{
+        0%{
+            transform:rotate(0)
+        }
+        100%{
+            transform:rotate(360deg)
+        }
+    }
+    nav a:hover{
+        color:#fff
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <div class="logo">
+        <img src="Image/DP.JPG" alt="profile" style="width:30px;height:30px;border-radius:10px;object-fit:cover">
+      </div>
+      <div>
+        <h1>Portfolio</h1>
+        <div style="font-size:12px;color:var(--muted)">Student</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#Assignment">Assignment</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <button class="btn" id="themeBtn">Toggle Theme</button>
+      <a class="btn primary" href="Assignment.html">E-Portfolio</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="intro">
+        <div class="eyebrow">Hi, I'm</div>
+        <h2>Subash Adhikari<br/><span style="color:var(--accent)">UI / Front-end Developer</span></h2>
+        <p class="lead">I design / develop modern, responsive websites and web apps with beautiful animations and clean UX.</p>
+        <div class="cta">
+          <a class="primary" href="#projects">See my work</a>
+          <a class="secondary" href="#about">Learn more</a>
+        </div>
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">Tech: HTML • CSS • Bootstrap • JavaScript • PHP</div>
+      </div>
+      <aside class="card">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="Image/DP.JPG" alt="profile" style="width:300px;height:300px;border-radius:12px;object-fit:cover">
+          <div>
+            <!-- <div style="font-weight:700">Subash Adhikari</div>
+            <div class="small">Product-focused designer & developer</div> -->
+          </div>
+        </div>
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:12px 0">
+        <div style="display:flex;justify-content:space-between">
+          <div>
+                <div class="home-sci" style="padding-left: 50px;">
+                <a href="https://github.com/git-subashadhikari"><img src="Image/icon/github.png" style="width: 30px;" alt=""></a>
+                <a href="https://www.facebook.com/brosubu"><img src="Image/icon/facebook.png" style="width: 30px;" alt=""></a>
+                <a href="https://www.instagram.com/brosubu/""><img src="Image/icon/instagram.png" style="width: 30px;" alt=""></a>
+
+          </div>
+       
+        </div>
+      </aside>
+    </section>
+
+      <section id="skills" style="max-width:1100px;margin:40px auto;padding:0 20px">
+  <h2>Skill Charts</h2>
+  <p style="color:var(--muted)">My progress charts of programming.</p>
+
+  <!-- Horizontal Bars -->
+  <div class="skill">
+    <span>HTML</span>
+    <div class="bar"><div class="fill wp">75%</div></div>
+  </div>
+
+  <div class="skill">
+    <span>CSS</span>
+    <div class="bar"><div class="fill jq">65%</div></div>
+  </div>
+
+  <div class="skill">
+    <span>Bootstrap</span>
+    <div class="bar"><div class="fill bs">75%</div></div>
+  </div>
+<div class="skill">
+    <span>JavaScript</span>
+    <div class="bar"><div class="fill js">55%</div></div>
+  </div>
+<div class="skill">
+    <span>PHP</span>
+    <div class="bar"><div class="fill php">45%</div></div>
+  </div>
+<br><br>
+
+<!-- MY ASSIGNMENT SECTION -->
+      <section class="projects" id="Assignment">
+  <h2 style="margin:6px 20px 12px">My Assignment</h2>
+  <div class="grid">
+
+    <article class="project">
+      <img src="Image/FSD.png" alt="project"><br>
+      <a href="Assignment/FSD.html">Full Stack Development</a>
+      <p>Click Here to View.</p>
+    </article>
+
+    <article class="project">
+      <img src="Image/HTML.png" alt="project"><br>
+      <a href="Assignment/HTML.html">HTML</a>
+      <p>Click Here to View.</p>
+    </article>
+
+    <article class="project">
+      <img src="Image/CSS.png" alt="project"><br>
+       <a href="Assignment/CSS.html">CSS</a>
+      <p>Click Here to View.</p>
+    </article>
+
+    <article class="project">
+      <img src="Image/BS.png" alt="project"><br>
+       <a href="Assignment/Bootstrap.html">Bootstrap</a>
+      <p>Click Here to View.</p>
+    </article>
+
+    <article class="project">
+      <img src="Image/JS.png" alt="project"><br>
+       <a href="Assignment/JavaScript.html">JavaScript</a>
+      <p>Click Here to View.</p>
+    </article>
+
+  </div>
+</section>
+<section class="projects" id="projects">
+      <h2 style="margin:6px 20px 12px">Projects Completed</h2>
+      <div class="grid">
+        <article class="project">
+          <img src="Image/Food_Menu.png" alt="project"><br>
+        <a href="Projects/HM.html">Online Food Menu</a>
+          <p>Menu Design with HTML/CSS.</p>
+        </article>
+        <article class="project">
+          <img src="Image/registration_Form.png" alt="project"><br>
+            <a href="Projects/Student_registration.html">Student Registration Form</a>
+          <p>Form using HTML</p>
+        </article>
+        <article class="project">
+          <img src="Image/LCE.png" alt="project"><br>
+            <a href="Projects/Code_Tester.html">Live Code Editor</a>
+         <p>Practice HTML/CSS/JS code using editor</p>
+        </article>
+        <article class="project">
+          <img src="Image/Template.png" alt="project"><br>
+            <a href="Projects/Template.html">Template</a>
+          <p>Mobile-first web app design.</p>
+        </article>
+      </div>
+
+      <div class="slider" style="max-width:1100px;margin:26px auto 0;">
+        <div class="slides" id="slides">
+          <div class="slide"><img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=1400&q=60" alt="slide1"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1400&q=60" alt="slide2"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=60" alt="slide3"></div>
+        </div>
+        <button class="arrow left" id="prev">◀</button>
+        <button class="arrow right" id="next">▶</button>
+      </div>
+    </section>
+
+    <section id="about" style="max-width:1100px;margin:28px auto;padding:0 20px">
+      <h2>About Me</h2>
+      <p style="color:var(--muted);max-width:780px">
+            I am a student at ISMT College with a strong passion for technology and web development. Over the course of my learning, I have developed skills in HTML, CSS, 
+            and JavaScript, which enable me to create responsive, visually appealing, and interactive websites. I enjoy experimenting with design and functionality to deliver 
+            user-friendly digital experiences. Alongside my technical learning, I am also focused on improving problem-solving, creativity, and attention to detail. My goal 
+            is to keep enhancing my knowledge, explore advanced frameworks, and grow as a professional developer who can contribute to innovative and impactful projects.
+            </p>
+    </section>
+
+    <section id="contact" style="max-width:1100px;margin:28px auto;padding:0 20px 80px">
+      <h2>Contact</h2>
+      <form style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:780px">
+        <input placeholder="Name" style="padding:12px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit">
+        <input placeholder="Email" style="padding:12px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit">
+        <textarea placeholder="Message" style="grid-column:1/-1;padding:12px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit;min-height:120px"></textarea>
+        <button style="grid-column:1/-1;padding:12px;background:var(--accent);border:0;border-radius:10px;color:#021426;font-weight:700">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:12px 20px">
+      <div style="color:var(--muted)">© <span id="year"></span> Subash Adhikari - bi95gn</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple theme toggle (light/dark)
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn.addEventListener('click', ()=>{
+      if(document.documentElement.style.getPropertyValue('--bg') === ''){
+        document.documentElement.style.setProperty('--bg','');
+      }
+      document.body.classList.toggle('light');
+      if(document.body.classList.contains('light')){
+        document.body.style.background = 'linear-gradient(180deg,#f7fafc,#e6eef7)';
+        document.body.style.color = '#081426';
+      } else {
+        document.body.style.background = 'linear-gradient(180deg,#071029 0%, #071a2b 100%)';
+        document.body.style.color = '#e6eef7';
+      }
+    });
+
+    // Slider logic
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    let idx = 0;
+    document.getElementById('next').addEventListener('click', ()=>{
+      idx = (idx+1) % total; slides.style.transform = `translateX(-${idx*100}%)`;
+    });
+    document.getElementById('prev').addEventListener('click', ()=>{
+      idx = (idx-1 + total) % total; slides.style.transform = `translateX(-${idx*100}%)`;
+    });
+
+    // keyboard support
+    document.addEventListener('keydown',(e)=>{ if(e.key === 'ArrowRight') 
+    document.getElementById('next').click(); if(e.key === 'ArrowLeft') 
+    document.getElementById('prev').click(); });
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a=>{a.addEventListener('click',(e)=>{e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});});
+    });
+  </script>
+</body>
+</html>

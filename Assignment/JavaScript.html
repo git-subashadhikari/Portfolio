@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><- Back to Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-light text-center py-5">
+    <div class="container">
+      <h1 class="display-4"><b>JavaScript </b></h1>
+      <p class="lead">Animating / Responding webpage content</p>
+      <p class="lead">
+        JavaScript is a lightweight and multipurpose programming language that is mainly used for creating dynamic and interactive content on websites. 
+        JavaScript is embedded with HTML to get structure and CSS to get style. It adds activities, read-time updates, user interaction and animation 
+        on a static HTML / CSS webpage without reloading. The code written in JS is browser-independent in nature and directly understood by the browser. 
+        It is used to manipulate DOM (Document Object Model), form validation, APIs integration and building a responsive interface. It is also used in 
+        backend development after being combined with Node.js. Its ease and support build a foundation in modern web technologies.   </p>
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Learn More</h2>
+      <div class="row">
+        
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Roles / working of JavaScript</h5>
+              <p class="card-text">Click here to view</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Structure of JavaScript</h5>
+              <p class="card-text">Brief details</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Example / Evidence </h5>
+              <p class="card-text">Screenshot of code / Output</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Read More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-dark text-white py-5">
+    <div class="container text-center">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:yourname@email.com" class="text-white">bi95gn@student.sunderland.ac.uk</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2025 Subash Adhikari (Student). All Rights Reserved.</p>
+  </footer>
+
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Reason of Using Bootstrap</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><pre>
+Roles of JavaScript:
+•	Activities (clicking, typing, scrolling) of the user are handled. 
+•	Update and deploy the structure of HTML. 
+•	Handles the verification and validation. 
+•	Update by connecting with the server without reloading the webpage. 
+•	Provide dynamic content and animate it.  <br><br>
+How does JavaScript work?
+•	Web Browser loads the HTML file and creates a Document Object Model.
+•	JS code is loaded.
+•	JS engine in the browser starts to run and execute code.
+•	JS engine changes the DOM (like image/text/style) and responds to user action (like click/scroll)
+
+
+</pre>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Conposition and Way to Use CSS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><pre>
+Structure of JavaScript:
+JavaScript is added in HTML file in three ways:
+•	Inline JS:
+Inline JS is the process of adding JavaScript code inside an element’s attributes.
+
+•	Internal JS
+Internal CSS is the process of adding JavaScript code inside the same HTML file in <&lthead>…<&lt/head> section.
+
+•	External JS
+External JS is the process of adding JavaScript code linking an external JS file to HTML using <&ltscript src=”script.js”> inside head section.
+
+          </pre></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Example:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="modal-title">Source Code:</h5> <br>
+          <img src="../Example/JS/4.JPG"width="100%" alt=""><br>       
+          <img src="../Example/JS/44.JPG"width="100%" alt=""><br>       
+
+          <h5 class="modal-title">Output Screen:</h5> <br> 
+          <img src="../Example/JS/444.JPG"width="100%" alt=""><br>       
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

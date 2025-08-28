@@ -1,0 +1,140 @@
+/* ---------------------------
+   Menu.css — Cafe Menu Mockup
+   Fonts: Josefin Sans (body), Pacifico (h1)
+   No body HTML changes required
+----------------------------*/
+
+/* Google Fonts (safe to @import in CSS if you prefer not to touch <head>) */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Pacifico&display=swap");
+
+/* ---- Reset / Base ---- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Josefin Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #1e1e1e;
+  font-variant-numeric: tabular-nums; /* nice aligned prices */
+  /* background gradient like the mock */
+  background: linear-gradient(180deg, #f1469c 0%, #ff7a59 55%, #f7b53a 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+/* ---- Card / Wrapper ----
+   Try to match a wide range of likely wrapper names without
+   editing the HTML body. Only the first matching element will style. */
+.menu, .menu-card, .container, .wrapper, main, article {
+  max-width: 740px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 44px 40px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.08);
+}
+
+/* ---- Title & Tagline ---- */
+.menu h1, .menu-card h1, .container h1, .wrapper h1, main h1, article h1 {
+  font-family: "Pacifico", cursive;
+  font-size: clamp(40px, 7vw, 64px);
+  text-align: center;
+  line-height: 1;
+  margin: 8px 0 6px;
+}
+
+.menu h1 + p, .menu-card h1 + p, .container h1 + p, .wrapper h1 + p, main h1 + p, article h1 + p {
+  text-align: center;
+  font-size: 13px;
+  color: #757575;
+  font-style: italic;
+  margin: 0 0 26px;
+}
+
+/* ---- Section headings ---- */
+.menu h2, .menu-card h2, .container h2, .wrapper h2, main h2, article h2,
+.menu h3, .menu-card h3, .container h3, .wrapper h3, main h3, article h3 {
+  font-size: 18px;
+  margin: 26px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e4e4e4;
+  color: #101010;
+}
+
+/* ---- Lists of items ---- */
+.menu ul, .menu .items, .container ul, .wrapper ul, main ul, article ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each menu line: name (left) + price (right) + description (full width on next line) */
+.menu li, .menu .item, .container li, .wrapper li, main li, article li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 16px;
+  align-items: baseline;
+  padding: 8px 0;
+}
+
+/* Item name (first inline element) */
+.menu li strong,
+.menu li .title,
+.menu li span:first-child,
+.container li span:first-child,
+.wrapper li span:first-child {
+  font-weight: 700;
+}
+
+/* Price (span with class .price OR the last inline span on the first row) */
+.menu li .price,
+.container li .price,
+.wrapper li .price {
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+  justify-self: end;
+}
+.menu li > span:last-of-type { /* fallback when no .price class present */
+  justify-self: end;
+}
+
+/* Description: use <small>, <em>, or a second <p>. Force onto its own row */
+.menu li small,
+.menu li .desc,
+.menu li em,
+.menu li p:not(:first-child),
+.container li small,
+.wrapper li small {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: #7a7a7a;
+  font-style: italic;
+}
+
+/* ---- Footer / fine print ---- */
+.menu footer, .container footer, .wrapper footer, main footer, article footer,
+.menu .fineprint, .container .fineprint, .wrapper .fineprint {
+  text-align: center;
+  margin-top: 28px;
+  color: #8a8a8a;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.menu footer .icons, .icons, footer .icons { margin-top: 6px; }
+.menu footer .icons i, .icons i, footer i {
+  margin: 0 4px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ---- Small-screen tweaks ---- */
+@media (max-width: 520px) {
+  .menu, .menu-card, .container, .wrapper, main, article { padding: 28px 22px; }
+  .menu h1, .menu-card h1, .container h1, .wrapper h1, main h1, article h1 { font-size: 44px; }
+}

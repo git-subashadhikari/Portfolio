@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Creative Assignment Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+  <!-- Navbar -->
+  <nav class="animated-navbar d-flex justify-content-between align-items-center px-4">
+    <!-- Logo -->
+    <div class="logo">E-Portfolio of BI95GN</div>
+
+    <!-- Links + Toggle -->
+    <div class="d-flex align-items-center gap-4">
+      <a href="index.html">Home</a>
+      <a href="Index.html">About Me</a>
+      <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      
+      <!-- Left Side Buttons -->
+      <div class="col-md-2 d-flex flex-column align-items-stretch gap-3" id="assignments">
+        <div class="assignment-card" onclick="showPDF('Documents/Full_Stack_Development.pdf')">Assignment 1</div>
+        <div class="assignment-card" onclick="showPDF('Documents/HTML.pdf')">Assignment 2</div>
+        <div class="assignment-card" onclick="showPDF('Documents/CSS.pdf')">Assignment 3</div>
+        <div class="assignment-card" onclick="showPDF('Documents/Bootstrap.pdf')">Assignment 4</div>
+        <div class="assignment-card" onclick="showPDF('Documents/JavaScript.pdf')">Assignment 5</div>
+
+      </div>
+
+      <!-- Right Side PDF Viewer -->
+      <div class="col-md-10">
+        <div class="viewer" id="viewer">
+          <iframe id="pdfViewer" src="" width="100%" height="700px"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <script>
+    // Show PDF
+    function showPDF(pdfPath) {
+      document.getElementById('pdfViewer').src = pdfPath;
+    }
+
+    // Dark/Light Mode Toggle
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("light-mode");
+
+      // Change toggle button icon
+      const btn = document.querySelector(".toggle-btn");
+      if (document.body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️";
+      } else {
+        btn.textContent = "🌙";
+      }
+    }
+  </script>
+</body>
+</html>
